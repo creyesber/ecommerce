@@ -2,17 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Gracias - MiTiendaFicticia</title>
+  <title>Gracias</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><h1>Gracias por tu compra</h1></header>
+  <header><h1>¡Gracias por tu compra!</h1></header>
   <main>
-    <p>Tu pedido ha sido confirmado.</p>
+    <p>Tu pedido ha sido confirmado correctamente.</p>
   </main>
   <script>
     const compraValida = localStorage.getItem('compraValida');
     if (compraValida === 'true') {
+      window.dataLayer = window.dataLayer || [];
       dataLayer.push({
         event: 'purchase',
         ecommerce: {

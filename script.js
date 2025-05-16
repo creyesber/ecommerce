@@ -1,24 +1,22 @@
 window.dataLayer = window.dataLayer || [];
 
 function addToCart(id) {
-  localStorage.setItem('carrito', JSON.stringify([{ item_id: id, item_name: id.replace('-', ' '), price: 15.99, quantity: 1 }]));
-  dataLayer.push({
-    event: 'add_to_cart',
-    ecommerce: {
-      items: [{
-        item_name: id.replace('-', ' '),
-        item_id: id,
-        price: 15.99,
-        quantity: 1
-      }]
-    }
-  });
+  const items = [{
+    item_id: id,
+    item_name: id.replace('-', ' '),
+    price: 15.99,
+    quantity: 1
+  }];
+  localStorage.setItem('carrito', JSON.stringify(items));
+  dataLayer.push({ event: 'add_to_cart', ecommerce: { items } });
 }
 
 function renderCart() {
   const items = JSON.parse(localStorage.getItem('carrito') || '[]');
   const container = document.getElementById('cart-items');
-  container.innerHTML = items.map(i => `<li>${i.item_name} - ${i.price}€</li>`).join('');
+  if (container) {
+    container.innerHTML = items.map(i => `<li>${i.item_name} - ${i.price}€</li>`).join('');
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function () {

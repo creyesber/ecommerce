@@ -2,24 +2,27 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Producto - MiTiendaFicticia</title>
+  <title>Producto - Camiseta Verde</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><h1>Detalle del Producto</h1></header>
+  <header><h1>Camiseta Verde</h1></header>
   <nav>
     <a href="index.html">Inicio</a>
     <a href="carrito.html">Carrito</a>
     <a href="checkout.html">Checkout</a>
   </nav>
   <main>
-    <h2>Camiseta Verde</h2>
-    <img src="https://placehold.co/400x400?text=Camiseta+Verde" alt="Camiseta Verde">
-    <p>Precio: 15,99 €</p>
-    <button onclick="addToCart('camiseta-verde')">Añadir al carrito</button>
+    <div class="product">
+      <img src="https://placehold.co/400x400/28a745/FFF?text=Camiseta+Verde" alt="Camiseta Verde">
+      <h3>Camiseta Verde</h3>
+      <p>Precio: 15,99 €</p>
+      <button onclick="addToCart('camiseta-verde')">Añadir al carrito</button>
+    </div>
   </main>
   <script src="script.js"></script>
   <script>
+    window.dataLayer = window.dataLayer || [];
     dataLayer.push({
       event: 'view_item',
       ecommerce: {
