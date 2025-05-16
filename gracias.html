@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gracias - MiTiendaFicticia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Gracias por tu compra</h1></header>
+  <main>
+    <p>Tu pedido ha sido confirmado.</p>
+  </main>
+  <script>
+    const compraValida = localStorage.getItem('compraValida');
+    if (compraValida === 'true') {
+      dataLayer.push({
+        event: 'purchase',
+        ecommerce: {
+          transaction_id: 'ORD123',
+          value: 15.99,
+          currency: 'EUR',
+          items: [{
+            item_name: 'Camiseta Verde',
+            item_id: 'camiseta-verde',
+            price: 15.99,
+            quantity: 1
+          }]
+        }
+      });
+      localStorage.removeItem('compraValida');
+    }
+  </script>
+</body>
+</html>

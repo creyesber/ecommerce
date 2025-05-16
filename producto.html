@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Producto - MiTiendaFicticia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Detalle del Producto</h1></header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="checkout.html">Checkout</a>
+  </nav>
+  <main>
+    <h2>Camiseta Verde</h2>
+    <img src="https://placehold.co/400x400?text=Camiseta+Verde" alt="Camiseta Verde">
+    <p>Precio: 15,99 €</p>
+    <button onclick="addToCart('camiseta-verde')">Añadir al carrito</button>
+  </main>
+  <script src="script.js"></script>
+  <script>
+    dataLayer.push({
+      event: 'view_item',
+      ecommerce: {
+        items: [{
+          item_name: 'Camiseta Verde',
+          item_id: 'camiseta-verde',
+          price: 15.99,
+          quantity: 1
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

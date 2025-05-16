@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito - MiTiendaFicticia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Tu carrito</h1></header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="checkout.html">Checkout</a>
+  </nav>
+  <main>
+    <ul id="cart-items"></ul>
+    <a href="checkout.html"><button>Ir al Checkout</button></a>
+  </main>
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('load', renderCart);
+    dataLayer.push({ event: 'view_cart' });
+  </script>
+</body>
+</html>
