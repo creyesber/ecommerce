@@ -6,30 +6,49 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><h1>¡Gracias por tu compra!</h1></header>
-  <main>
-    <p>Tu pedido ha sido confirmado correctamente.</p>
+  <header>
+    <div class="container">
+      <h1>MiTiendaFicticia</h1>
+      <p>Las mejores camisetas al mejor precio</p>
+    </div>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="checkout.html">Checkout</a>
+  </nav>
+  <main class="container">
+    
+<h2>¡Gracias por tu compra!</h2>
+<p>Tu pedido ha sido confirmado correctamente.</p>
+<script>
+  const compraValida = localStorage.getItem('compraValida');
+  if (compraValida === 'true') {
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      event: 'purchase',
+      ecommerce: {
+        transaction_id: 'ORD123',
+        value: 15.99,
+        currency: 'EUR',
+        items: [{
+          item_name: 'Camiseta Verde',
+          item_id: 'camiseta-verde',
+          price: 15.99,
+          quantity: 1
+        }]
+      }
+    });
+    localStorage.removeItem('compraValida');
+  }
+</script>
+
   </main>
-  <script>
-    const compraValida = localStorage.getItem('compraValida');
-    if (compraValida === 'true') {
-      window.dataLayer = window.dataLayer || [];
-      dataLayer.push({
-        event: 'purchase',
-        ecommerce: {
-          transaction_id: 'ORD123',
-          value: 15.99,
-          currency: 'EUR',
-          items: [{
-            item_name: 'Camiseta Verde',
-            item_id: 'camiseta-verde',
-            price: 15.99,
-            quantity: 1
-          }]
-        }
-      });
-      localStorage.removeItem('compraValida');
-    }
-  </script>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MiTiendaFicticia</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

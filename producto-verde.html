@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Carrito</title>
+  <title>Camiseta Verde</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,13 +19,13 @@
   </nav>
   <main class="container">
     
-<h2>Tu carrito</h2>
-<ul id="cart-items"></ul>
-<a href="checkout.html" class="btn">Ir al Checkout</a>
-<script>
-  window.addEventListener('load', renderCart);
-</script>
-
+    <div class="product">
+      <img src="https://placehold.co/400x400/28a745/FFF?text=Camiseta+Verde" alt="Camiseta Verde">
+      <h3>Camiseta Verde</h3>
+      <p>Precio: 15.99 €</p>
+      <button class="btn" onclick="addToCart('camiseta-verde')">Añadir al carrito</button>
+    </div>
+    
   </main>
   <footer>
     <div class="container">

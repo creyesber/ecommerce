@@ -6,15 +6,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><h1>Checkout</h1></header>
-  <main>
-    <form id="checkout-form">
-      <input type="text" id="name" placeholder="Nombre completo" required>
-      <input type="text" id="address" placeholder="Dirección" required>
-      <input type="text" id="card" placeholder="Tarjeta de crédito" required>
-      <button type="submit">Completar compra</button>
-    </form>
+  <header>
+    <div class="container">
+      <h1>MiTiendaFicticia</h1>
+      <p>Las mejores camisetas al mejor precio</p>
+    </div>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="checkout.html">Checkout</a>
+  </nav>
+  <main class="container">
+    
+<h2>Finaliza tu compra</h2>
+<form id="checkout-form">
+  <input type="text" id="name" placeholder="Nombre completo" required>
+  <input type="text" id="address" placeholder="Dirección" required>
+  <input type="text" id="card" placeholder="Tarjeta de crédito" required>
+  <button class="btn" type="submit">Completar compra</button>
+</form>
+
   </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MiTiendaFicticia</p>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

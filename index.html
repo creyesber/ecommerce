@@ -2,61 +2,57 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Inicio - MiTiendaFicticia</title>
+  <title>Inicio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><h1>MiTiendaFicticia</h1></header>
+  <header>
+    <div class="container">
+      <h1>MiTiendaFicticia</h1>
+      <p>Las mejores camisetas al mejor precio</p>
+    </div>
+  </header>
   <nav>
     <a href="index.html">Inicio</a>
     <a href="carrito.html">Carrito</a>
     <a href="checkout.html">Checkout</a>
   </nav>
-  <main>
-    <h2>Productos Destacados</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="https://placehold.co/300x300/28a745/FFF?text=Camiseta+Verde" alt="Camiseta Verde">
-        <h3>Camiseta Verde</h3>
-        <p>15,99 €</p>
-        <button onclick="addToCart('camiseta-verde')">Añadir al carrito</button>
-      </div>
-      <div class="product">
-        <img src="https://placehold.co/300x300/dc3545/FFF?text=Camiseta+Roja" alt="Camiseta Roja">
-        <h3>Camiseta Roja</h3>
-        <p>18,99 €</p>
-        <button onclick="addToCart('camiseta-roja')">Añadir al carrito</button>
-      </div>
-      <div class="product">
-        <img src="https://placehold.co/300x300/007bff/FFF?text=Camiseta+Azul" alt="Camiseta Azul">
-        <h3>Camiseta Azul</h3>
-        <p>16,99 €</p>
-        <button onclick="addToCart('camiseta-azul')">Añadir al carrito</button>
-      </div>
-      <div class="product">
-        <img src="https://placehold.co/300x300/ffc107/333?text=Camiseta+Amarilla" alt="Camiseta Amarilla">
-        <h3>Camiseta Amarilla</h3>
-        <p>14,99 €</p>
-        <button onclick="addToCart('camiseta-amarilla')">Añadir al carrito</button>
-      </div>
-    </div>
+  <main class="container">
+    
+<h2>Novedades</h2>
+<div class="product-grid">
+  <div class="product">
+    <img src="https://placehold.co/300x300/28a745/FFF?text=Camiseta+Verde" alt="Camiseta Verde">
+    <h3>Camiseta Verde</h3>
+    <p>15,99 €</p>
+    <a class="btn" href="producto-verde.html">Ver producto</a>
+  </div>
+  <div class="product">
+    <img src="https://placehold.co/300x300/dc3545/FFF?text=Camiseta+Roja" alt="Camiseta Roja">
+    <h3>Camiseta Roja</h3>
+    <p>18,99 €</p>
+    <a class="btn" href="producto-roja.html">Ver producto</a>
+  </div>
+  <div class="product">
+    <img src="https://placehold.co/300x300/007bff/FFF?text=Camiseta+Azul" alt="Camiseta Azul">
+    <h3>Camiseta Azul</h3>
+    <p>16,99 €</p>
+    <a class="btn" href="producto-azul.html">Ver producto</a>
+  </div>
+  <div class="product">
+    <img src="https://placehold.co/300x300/ffc107/333?text=Camiseta+Amarilla" alt="Camiseta Amarilla">
+    <h3>Camiseta Amarilla</h3>
+    <p>14,99 €</p>
+    <a class="btn" href="producto-amarilla.html">Ver producto</a>
+  </div>
+</div>
+
   </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MiTiendaFicticia</p>
+    </div>
+  </footer>
   <script src="script.js"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({
-      event: 'view_item_list',
-      ecommerce: {
-        item_list_id: 'destacados',
-        item_list_name: 'Productos Destacados',
-        items: [
-          { item_id: 'camiseta-verde', item_name: 'Camiseta Verde', price: 15.99 },
-          { item_id: 'camiseta-roja', item_name: 'Camiseta Roja', price: 18.99 },
-          { item_id: 'camiseta-azul', item_name: 'Camiseta Azul', price: 16.99 },
-          { item_id: 'camiseta-amarilla', item_name: 'Camiseta Amarilla', price: 14.99 }
-        ]
-      }
-    });
-  </script>
 </body>
 </html>
